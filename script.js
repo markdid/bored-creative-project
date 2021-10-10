@@ -1,8 +1,8 @@
 function getIdea() {
     var part = parseInt(document.getElementById("parts").value) || 1
     part = (part > 5) ? 5 : part
-    var max = Math.min(parseInt(document.getElementById("max").value), 30) / 100 || 1
-    var min = Math.min(parseInt(document.getElementById("min").value), 100) / 100 || 0
+    var min = Math.min(parseInt(document.getElementById("min").value), 30) / 100 || 0
+    var max = Math.min(parseInt(document.getElementById("max").value), 100) / 100 || 1
     const url = "https://www.boredapi.com/api/activity/" + "?participants=" + part + "&minprice=" + min + "&maxprice=" + max
     document.getElementById("idea").innerHTML = ("...")
     fetch(url)
